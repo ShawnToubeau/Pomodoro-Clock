@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pomodoro Clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/0.9.0/progressbar.min.js"></script>
+    <script src="javascript.js"></script>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="row1" style="text-align: center;">
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="reset()">Reset</button>
+      </div>
+
+      <div class="row2">
+        <div class="break" style="float: left;">
+        <button onclick="breakDec()" style="float: left;">-</button>
+          <div style="float: left; text-align: center;">
+            <p>Break Length</p>
+            <p id="breakLength">5</p>
+          </div>
+        <button onclick="breakInc()">+</button>
+        </div>
+
+        <div class="session" style="float: right;">
+          <button onclick="sessionDec()">-</button>
+          <button onclick="sessionInc()" style="float: right;">+</button>
+          <div style="float: right; text-align: center;">
+            <p>Session Length</p>
+            <p id="sessionLength">20</p>
+          </div>
+        </div>
+      </div>
+      <div class="row3">
+        <div id="container"></div>
+      </div>
+    </div>
+  </body>
+</html>
